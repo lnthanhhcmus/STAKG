@@ -12,7 +12,6 @@ This paper implements a video captioning system that integrates both **Action Gr
 - The system is trained and evaluated on standard video captioning benchmarks such as **MSVD** and **MSR-VTT**, using metrics including BLEU-4, CIDEr, METEOR, and ROUGE-L.
 
 
-![alt_text](assets/MODEL.drawio.png)
 ## Prepare the Environment 
 Install and create conda environment, which was tested with NVIDIA RTX 3090.
 ```
@@ -68,7 +67,7 @@ Train CLIP4Clip based on https://github.com/ArrowLuo/CLIP4Clip and put the best 
    - For MSR-VTT, we use 6513 clips for training, 497 clips for validation and 2990 clips for test when training the CLIP4Clip.
    - For MSVD, we use 1200 clips for training, 100 clips for validation and 670 clips for test when training the CLIP4Clip.
 ### Grid Based Action Graph
-![alt_text](assets/STG.drawio.svg)
+
 Steps:
 1. Extract grid node by using **grid_node_feature_extractor.py**.
 2. Extract spatial action graph by using **grid_based_spatial_action_graph.py**.
@@ -78,7 +77,7 @@ Steps:
    - run **transform-graph-to-geometric.py**
 
 ### Knowledge Graph
-![alt_text](assets/KG.drawio.png)
+
 ## Training
 Control how relation features are processed using the `--attention` flag:
    - `--attention 1`: **MHA**  
